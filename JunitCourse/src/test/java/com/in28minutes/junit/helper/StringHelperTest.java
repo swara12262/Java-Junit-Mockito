@@ -2,10 +2,18 @@ package com.in28minutes.junit.helper;
 
 import static org.junit.Assert.*;
 
+import org.junit.After;
+import org.junit.Before;
 import org.junit.Test;
 
 public class StringHelperTest {
-	StringHelper sh=new StringHelper();
+	StringHelper sh;
+	
+	@Before
+	public void before() {
+		
+		sh=new StringHelper();
+	}
 	@Test
 	public void testTruncateAInFirst2Positions_1() {
 		
@@ -19,5 +27,11 @@ public class StringHelperTest {
 	@Test
 	public void testAreFirstAndLastTwoCharactersTheSame() {
 		assertFalse( sh.areFirstAndLastTwoCharactersTheSame("ABCD"));
+	}
+	
+	@After
+	public void after() {
+		//db connection close like finalize
+		System.out.println("After");
 	}
 }
