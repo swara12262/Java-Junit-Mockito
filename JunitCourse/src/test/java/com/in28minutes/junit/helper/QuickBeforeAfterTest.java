@@ -3,9 +3,14 @@ package com.in28minutes.junit.helper;
 import static org.junit.Assert.*;
 
 import org.junit.Before;
+import org.junit.BeforeClass;
 import org.junit.Test;
 
 public class QuickBeforeAfterTest {
+	@BeforeClass
+	public static void beforeClass() {
+		System.out.println("before Class");
+	}
 	
 	@Before
 	public void setup() {
