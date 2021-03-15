@@ -24,4 +24,13 @@ public class ArraysCompareTest {
 		Arrays.sort(actual);
 		
 	}
+	
+	@Test(timeout=100)
+	public void testPerformance() {
+		int a[]= {1,33,23};
+		for(int i=0;i<=1000000;i++) {
+			a[0]+=5;
+			Arrays.sort(a);
+		}
+	}
 }
