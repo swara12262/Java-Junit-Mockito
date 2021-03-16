@@ -1,7 +1,7 @@
 package com.in28minutes.data.api;
 
-import java.awt.List;
+import java.util.List;
 
 public interface TodoService {
-	public List retrieveTodos(String user);
+	public List<String> retrieveTodos(String user);
 }
