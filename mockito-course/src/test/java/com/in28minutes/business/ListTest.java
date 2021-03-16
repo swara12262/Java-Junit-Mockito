@@ -48,7 +48,7 @@ public class ListTest {
 	public void testMockListGetMethod_UsingBDD() {
 		//given
 		List<String> listmock = mock(List.class);	
-		given(listmock.get(0)).willReturn("Swara");
+		given(listmock.get(anyInt())).willReturn("Swara");
 		
 		//when
 		String s  = listmock.get(0);

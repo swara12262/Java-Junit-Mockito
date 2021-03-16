@@ -23,4 +23,15 @@ public class TodoBusinessImpl {
 		}
 		return filteredTodos;
 	}
+	
+	public void deleteToDosNotRelatedToSpring(String user){
+
+		List<String> toDos = todoService.retrieveTodos(user);
+		
+		for(String toDo: toDos) {
+			if(!toDo.contains("Spring"))
+				todoService.deleteToDo(toDo);
+		}
+
+	}
 }
